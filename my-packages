@@ -1,0 +1,14 @@
+#!/bin/sh
+sudo apt-get install git
+
+git init .
+git clone https://github.com/tahoemph/config.git .
+git remote add origin /home/mph https://github.com/tahoemph/config.git
+git reset origin/master
+git fetch 
+
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+sudo apt-get install vim
+vim +PluginInstall +qall
+
+sudo apt-get install tmux
