@@ -18,6 +18,8 @@ Plugin 'klen/python-mode'
 Plugin 'Conque-Shell'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'git://github.com/tpope/vim-dispatch.git'
+Plugin 'moll/vim-node'
+Plugin 'jelera/vim-javascript-syntax'
 
 call vundle#end()            " required
 
@@ -29,6 +31,8 @@ colorscheme slate    " I also like pablo
 let g:pymode_rope = 0
 let g:pymode_lint = 0
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set backupdir=~/tmp
+au FileType javascript call JavaScriptFold()
 
 " Preserve noeol (missing trailing eol) when saving file. In order
 " to do this we need to temporarily 'set binary' for the duration of
